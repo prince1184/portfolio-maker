@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome - Portfolio Maker{% endblock %}
+
+{% block content %}
+<div class="text-center py-5">
+    <h1 class="display-4">Welcome to Portfolio Maker</h1>
+    <p class="lead">Create your professional portfolio in minutes!</p>
+    <div class="mt-4">
+        <a href="{{ url_for('create') }}" class="btn btn-primary btn-lg">Create Your Portfolio</a>
+        {% if portfolio %}
+            <a href="{{ url_for('portfolio') }}" class="btn btn-success btn-lg ms-2">View Your Portfolio</a>
+        {% endif %}
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <h3>Easy to Use</h3>
+        <p>Simple form-based creation process. No coding required!</p>
+    </div>
+    <div class="col-md-4">
+        <h3>Professional Design</h3>
+        <p>Clean and modern design that works on all devices.</p>
+    </div>
+    <div class="col-md-4">
+        <h3>Instant Results</h3>
+        <p>See your portfolio come to life instantly!</p>
+    </div>
+</div>
+{% endblock %}

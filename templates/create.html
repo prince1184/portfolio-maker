@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Create Portfolio{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Create Your Portfolio</h2>
+<form method="POST" class="needs-validation" novalidate>
+    <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    
+    <div class="mb-3">
+        <label for="title" class="form-label">Professional Title</label>
+        <input type="text" class="form-control" id="title" name="title" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="about" class="form-label">About Me</label>
+        <textarea class="form-control" id="about" name="about" rows="4" required></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label for="skills" class="form-label">Skills (comma-separated)</label>
+        <input type="text" class="form-control" id="skills" name="skills" placeholder="e.g., Python, JavaScript, React" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="projects" class="form-label">Projects (one per line)</label>
+        <textarea class="form-control" id="projects" name="projects" rows="4" placeholder="Project 1&#10;Project 2&#10;Project 3" required></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="linkedin" class="form-label">LinkedIn Profile URL</label>
+        <input type="url" class="form-control" id="linkedin" name="linkedin">
+    </div>
+
+    <div class="mb-3">
+        <label for="github" class="form-label">GitHub Profile URL</label>
+        <input type="url" class="form-control" id="github" name="github">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Portfolio</button>
+</form>
+{% endblock %}
